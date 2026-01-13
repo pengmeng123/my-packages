@@ -9,7 +9,10 @@
     "clean": "pnpm run -r clean",
     "test": "pnpm run -r test",
     "lint": "eslint --ext \".js,.jsx,.ts,.tsx\" ./packages",
-    "prepare": "echo 'skip husky'"
+    "prepare": "echo 'skip husky'",
+    "publish:all": "pnpm run build && pnpm -r publish --no-git-checks",
+    "publish:utils": "cd packages/utils && pnpm publish --no-git-checks",
+    "publish:components": "cd packages/ui-components && pnpm publish --no-git-checks"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",

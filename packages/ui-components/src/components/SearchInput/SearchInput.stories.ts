@@ -64,9 +64,9 @@ export default {
 
 // 基础用法
 export const 基础用法 = () => ({
-  components: { KzzSearchInput: SearchInput },
+  components: { PSearchInput: SearchInput },
   template: `
-    <kzz-search-input placeholder="请输入企业名称" @search="onSearch" />
+    <p-search-input placeholder="请输入企业名称" @search="onSearch" />
   `,
   methods: {
     onSearch(value: string) {
@@ -78,7 +78,7 @@ export const 基础用法 = () => ({
   docs: {
     source: {
       code: `<template>
-  <kzz-search-input 
+  <p-search-input 
     placeholder="请输入企业名称" 
     @search="onSearch" 
   />
@@ -99,16 +99,16 @@ export default {
 
 // 加载状态
 export const 加载状态 = () => ({
-  components: { KzzSearchInput: SearchInput },
+  components: { PSearchInput: SearchInput },
   template: `
-    <kzz-search-input loading placeholder="搜索中..." />
+    <p-search-input loading placeholder="搜索中..." />
   `,
 });
 加载状态.parameters = {
   docs: {
     source: {
       code: `<template>
-  <kzz-search-input loading placeholder="搜索中..." />
+  <p-search-input loading placeholder="搜索中..." />
 </template>
 
 <script>
@@ -122,16 +122,16 @@ export default {
 
 // 禁用状态
 export const 禁用状态 = () => ({
-  components: { KzzSearchInput: SearchInput },
+  components: { PSearchInput: SearchInput },
   template: `
-    <kzz-search-input disabled placeholder="已禁用" />
+    <p-search-input disabled placeholder="已禁用" />
   `,
 });
 禁用状态.parameters = {
   docs: {
     source: {
       code: `<template>
-  <kzz-search-input disabled placeholder="已禁用" />
+  <p-search-input disabled placeholder="已禁用" />
 </template>
 
 <script>
@@ -145,16 +145,16 @@ export default {
 
 // 自定义按钮文字
 export const 自定义按钮 = () => ({
-  components: { KzzSearchInput: SearchInput },
+  components: { PSearchInput: SearchInput },
   template: `
-    <kzz-search-input button-text="查询" placeholder="输入关键词" />
+    <p-search-input button-text="查询" placeholder="输入关键词" />
   `,
 });
 自定义按钮.parameters = {
   docs: {
     source: {
       code: `<template>
-  <kzz-search-input 
+  <p-search-input 
     button-text="查询" 
     placeholder="输入关键词" 
   />
@@ -171,13 +171,13 @@ export default {
 
 // 双向绑定
 export const 双向绑定 = () => ({
-  components: { KzzSearchInput: SearchInput },
+  components: { PSearchInput: SearchInput },
   data() {
     return { keyword: '阿里巴巴' };
   },
   template: `
     <div>
-      <kzz-search-input v-model="keyword" @search="onSearch" />
+      <p-search-input v-model="keyword" @search="onSearch" />
       <p style="margin-top: 12px; color: #666;">当前值: {{ keyword }}</p>
     </div>
   `,
@@ -192,7 +192,7 @@ export const 双向绑定 = () => ({
     source: {
       code: `<template>
   <div>
-    <kzz-search-input v-model="keyword" @search="onSearch" />
+    <p-search-input v-model="keyword" @search="onSearch" />
     <p>当前值: {{ keyword }}</p>
   </div>
 </template>

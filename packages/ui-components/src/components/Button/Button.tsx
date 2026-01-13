@@ -15,7 +15,7 @@ export interface ButtonProps {
 }
 
 export default Vue.extend({
-  name: 'KzzButton',
+  name: 'PButton',
 
   props: {
     type: {

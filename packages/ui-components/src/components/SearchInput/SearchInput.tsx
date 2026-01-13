@@ -12,7 +12,7 @@ export interface SearchInputProps {
 }
 
 export default Vue.extend({
-  name: 'KzzSearchInput',
+  name: 'PSearchInput',
 
   model: {
     prop: 'value',

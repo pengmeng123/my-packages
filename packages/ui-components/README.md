@@ -37,7 +37,7 @@ import '@pengmeng/ui-components/es/index.css';
 
 Vue.use(Button);
 // 或
-Vue.component('KzzButton', Button);
+Vue.component('PButton', Button);
 ```
 
 ### 在模板中使用
@@ -45,11 +45,11 @@ Vue.component('KzzButton', Button);
 ```vue
 <template>
   <div>
-    <kzz-button type="primary">主要按钮</kzz-button>
-    <kzz-button>默认按钮</kzz-button>
-    <kzz-button type="dashed">虚线按钮</kzz-button>
-    <kzz-button type="text">文字按钮</kzz-button>
-    <kzz-button type="link">链接按钮</kzz-button>
+    <p-button type="primary">主要按钮</p-button>
+    <p-button>默认按钮</p-button>
+    <p-button type="dashed">虚线按钮</p-button>
+    <p-button type="text">文字按钮</p-button>
+    <p-button type="link">链接按钮</p-button>
   </div>
 </template>
 ```
@@ -95,7 +95,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import styles from './Input.module.less';
 
 @Component({
-  name: 'KzzInput',
+  name: 'PInput',
 })
 export default class Input extends Vue {
   @Prop({ type: String, default: '' })
@@ -119,7 +119,7 @@ import { VueConstructor } from 'vue';
 import Input from './Input';
 
 (Input as any).install = function (Vue: VueConstructor): void {
-  Vue.component(Input.name || 'KzzInput', Input);
+  Vue.component(Input.name || 'PInput', Input);
 };
 
 export default Input;

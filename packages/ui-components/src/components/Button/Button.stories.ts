@@ -66,14 +66,14 @@ export default {
 
 // 基础用法
 export const 基础用法 = () => ({
-  components: { KzzButton: Button },
+  components: { PButton: Button },
   template: `
     <div style="display: flex; gap: 12px;">
-      <kzz-button type="primary">主要按钮</kzz-button>
-      <kzz-button>默认按钮</kzz-button>
-      <kzz-button type="dashed">虚线按钮</kzz-button>
-      <kzz-button type="text">文字按钮</kzz-button>
-      <kzz-button type="link">链接按钮</kzz-button>
+      <p-button type="primary">主要按钮</p-button>
+      <p-button>默认按钮</p-button>
+      <p-button type="dashed">虚线按钮</p-button>
+      <p-button type="text">文字按钮</p-button>
+      <p-button type="link">链接按钮</p-button>
     </div>
   `,
 });
@@ -82,11 +82,11 @@ export const 基础用法 = () => ({
     source: {
       code: `<template>
   <div>
-    <kzz-button type="primary">主要按钮</kzz-button>
-    <kzz-button>默认按钮</kzz-button>
-    <kzz-button type="dashed">虚线按钮</kzz-button>
-    <kzz-button type="text">文字按钮</kzz-button>
-    <kzz-button type="link">链接按钮</kzz-button>
+    <p-button type="primary">主要按钮</p-button>
+    <p-button>默认按钮</p-button>
+    <p-button type="dashed">虚线按钮</p-button>
+    <p-button type="text">文字按钮</p-button>
+    <p-button type="link">链接按钮</p-button>
   </div>
 </template>
 
@@ -101,12 +101,12 @@ export default {
 
 // 按钮尺寸
 export const 按钮尺寸 = () => ({
-  components: { KzzButton: Button },
+  components: { PButton: Button },
   template: `
     <div style="display: flex; gap: 12px; align-items: center;">
-      <kzz-button type="primary" size="large">大号按钮</kzz-button>
-      <kzz-button type="primary">默认按钮</kzz-button>
-      <kzz-button type="primary" size="small">小号按钮</kzz-button>
+      <p-button type="primary" size="large">大号按钮</p-button>
+      <p-button type="primary">默认按钮</p-button>
+      <p-button type="primary" size="small">小号按钮</p-button>
     </div>
   `,
 });
@@ -115,9 +115,9 @@ export const 按钮尺寸 = () => ({
     source: {
       code: `<template>
   <div>
-    <kzz-button type="primary" size="large">大号按钮</kzz-button>
-    <kzz-button type="primary">默认按钮</kzz-button>
-    <kzz-button type="primary" size="small">小号按钮</kzz-button>
+    <p-button type="primary" size="large">大号按钮</p-button>
+    <p-button type="primary">默认按钮</p-button>
+    <p-button type="primary" size="small">小号按钮</p-button>
   </div>
 </template>
 
@@ -132,12 +132,12 @@ export default {
 
 // 禁用状态
 export const 禁用状态 = () => ({
-  components: { KzzButton: Button },
+  components: { PButton: Button },
   template: `
     <div style="display: flex; gap: 12px;">
-      <kzz-button type="primary" disabled>主要按钮</kzz-button>
-      <kzz-button disabled>默认按钮</kzz-button>
-      <kzz-button type="dashed" disabled>虚线按钮</kzz-button>
+      <p-button type="primary" disabled>主要按钮</p-button>
+      <p-button disabled>默认按钮</p-button>
+      <p-button type="dashed" disabled>虚线按钮</p-button>
     </div>
   `,
 });
@@ -146,9 +146,9 @@ export const 禁用状态 = () => ({
     source: {
       code: `<template>
   <div>
-    <kzz-button type="primary" disabled>主要按钮</kzz-button>
-    <kzz-button disabled>默认按钮</kzz-button>
-    <kzz-button type="dashed" disabled>虚线按钮</kzz-button>
+    <p-button type="primary" disabled>主要按钮</p-button>
+    <p-button disabled>默认按钮</p-button>
+    <p-button type="dashed" disabled>虚线按钮</p-button>
   </div>
 </template>
 
@@ -163,11 +163,11 @@ export default {
 
 // 加载状态
 export const 加载状态 = () => ({
-  components: { KzzButton: Button },
+  components: { PButton: Button },
   template: `
     <div style="display: flex; gap: 12px;">
-      <kzz-button type="primary" loading>加载中</kzz-button>
-      <kzz-button loading>加载中</kzz-button>
+      <p-button type="primary" loading>加载中</p-button>
+      <p-button loading>加载中</p-button>
     </div>
   `,
 });
@@ -176,8 +176,8 @@ export const 加载状态 = () => ({
     source: {
       code: `<template>
   <div>
-    <kzz-button type="primary" loading>加载中</kzz-button>
-    <kzz-button loading>加载中</kzz-button>
+    <p-button type="primary" loading>加载中</p-button>
+    <p-button loading>加载中</p-button>
   </div>
 </template>
 
@@ -192,12 +192,12 @@ export default {
 
 // 危险按钮
 export const 危险按钮 = () => ({
-  components: { KzzButton: Button },
+  components: { PButton: Button },
   template: `
     <div style="display: flex; gap: 12px;">
-      <kzz-button type="primary" danger>危险按钮</kzz-button>
-      <kzz-button danger>危险按钮</kzz-button>
-      <kzz-button type="dashed" danger>危险按钮</kzz-button>
+      <p-button type="primary" danger>危险按钮</p-button>
+      <p-button danger>危险按钮</p-button>
+      <p-button type="dashed" danger>危险按钮</p-button>
     </div>
   `,
 });
@@ -206,9 +206,9 @@ export const 危险按钮 = () => ({
     source: {
       code: `<template>
   <div>
-    <kzz-button type="primary" danger>危险按钮</kzz-button>
-    <kzz-button danger>危险按钮</kzz-button>
-    <kzz-button type="dashed" danger>危险按钮</kzz-button>
+    <p-button type="primary" danger>危险按钮</p-button>
+    <p-button danger>危险按钮</p-button>
+    <p-button type="dashed" danger>危险按钮</p-button>
   </div>
 </template>
 
@@ -223,11 +223,11 @@ export default {
 
 // 块级按钮
 export const 块级按钮 = () => ({
-  components: { KzzButton: Button },
+  components: { PButton: Button },
   template: `
     <div style="width: 300px;">
-      <kzz-button type="primary" block style="margin-bottom: 12px;">主要按钮</kzz-button>
-      <kzz-button block>默认按钮</kzz-button>
+      <p-button type="primary" block style="margin-bottom: 12px;">主要按钮</p-button>
+      <p-button block>默认按钮</p-button>
     </div>
   `,
 });
@@ -236,8 +236,8 @@ export const 块级按钮 = () => ({
     source: {
       code: `<template>
   <div style="width: 300px;">
-    <kzz-button type="primary" block>主要按钮</kzz-button>
-    <kzz-button block>默认按钮</kzz-button>
+    <p-button type="primary" block>主要按钮</p-button>
+    <p-button block>默认按钮</p-button>
   </div>
 </template>
 

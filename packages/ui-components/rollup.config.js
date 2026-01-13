@@ -50,7 +50,7 @@ export default {
             return name;
           }
           const moduleName = _.kebabCase(_.first(path.basename(filename).split('.')));
-          return `kzz_${moduleName}_${_.kebabCase(name)}`;
+          return `p_${moduleName}_${_.kebabCase(name)}`;
         },
       },
       plugins: [autoprefixer()],

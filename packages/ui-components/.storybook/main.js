@@ -36,7 +36,7 @@ module.exports = {
           options: {
             modules: {
               auto: /\.module\.less$/,
-              localIdentName: 'kzz_[name]_[local]',
+              localIdentName: 'p_[name]_[local]',
             },
           },
         },

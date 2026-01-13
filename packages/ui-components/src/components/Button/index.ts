@@ -5,7 +5,7 @@ export type { ButtonProps, ButtonType, ButtonSize } from './Button';
 
 // Vue.use() 安装方法
 (Button as any).install = function (Vue: VueConstructor): void {
-  Vue.component('KzzButton', Button);
+  Vue.component('PButton', Button);
 };
 
 export default Button;

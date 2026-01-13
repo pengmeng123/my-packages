@@ -56,5 +56,8 @@
   "repository": {
     "type": "git",
     "url": "http://gitlab.greatld.com:18888/pengmeng/components/frontend/packages.git"
+  },
+  "publishConfig": {
+    "registry": "http://172.16.183.334:9999"
   }
 }
