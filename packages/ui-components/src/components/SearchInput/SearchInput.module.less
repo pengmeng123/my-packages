@@ -1,0 +1,33 @@
+@import '../../styles/vars.less';
+
+.searchInput {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input {
+  flex: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  &:focus,
+  &:hover {
+    border-color: @primary-color;
+  }
+
+  :global {
+    .ant-input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+

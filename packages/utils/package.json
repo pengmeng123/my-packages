@@ -1,0 +1,31 @@
+{
+  "name": "@kezhaozhao/ui-utils",
+  "version": "0.0.1",
+  "description": "UI 组件库公共工具函数",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "license": "UNLICENSED",
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf lib es",
+    "build:cjs": "tsc --module commonjs --outDir lib",
+    "build:esm": "tsc --module ESNext --outDir es",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm"
+  },
+  "files": [
+    "lib",
+    "es"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.178"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.greatld.com:18888/kezhaozhao/components/frontend/packages.git"
+  }
+}
+

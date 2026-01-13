@@ -1,0 +1,168 @@
+@import '../../styles/vars.less';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 @padding-md;
+  height: @height-base;
+  font-size: @font-size-base;
+  font-weight: 400;
+  line-height: 1.5715;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: @border-radius-base;
+  transition: all @animation-duration-base @ease-base-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  // 尺寸变体
+  &.large {
+    height: @height-lg;
+    padding: 0 @padding-lg;
+    font-size: @font-size-lg;
+  }
+
+  &.small {
+    height: @height-sm;
+    padding: 0 @padding-xs;
+    font-size: @font-size-sm;
+  }
+
+  // 类型变体
+  &.primary {
+    color: #fff;
+    background-color: @primary-color;
+    border-color: @primary-color;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(@primary-color, 10%);
+      border-color: lighten(@primary-color, 10%);
+    }
+
+    &:active {
+      background-color: darken(@primary-color, 5%);
+      border-color: darken(@primary-color, 5%);
+    }
+  }
+
+  &.default {
+    color: @text-color;
+    background-color: #fff;
+    border-color: @border-color-base;
+
+    &:hover,
+    &:focus {
+      color: @primary-color;
+      border-color: @primary-color;
+    }
+
+    &:active {
+      color: darken(@primary-color, 5%);
+      border-color: darken(@primary-color, 5%);
+    }
+  }
+
+  &.dashed {
+    color: @text-color;
+    background-color: #fff;
+    border-color: @border-color-base;
+    border-style: dashed;
+
+    &:hover,
+    &:focus {
+      color: @primary-color;
+      border-color: @primary-color;
+    }
+  }
+
+  &.text {
+    color: @text-color;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: @primary-color;
+      background-color: @background-color-light;
+    }
+  }
+
+  &.link {
+    color: @primary-color;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: lighten(@primary-color, 10%);
+    }
+  }
+
+  // 危险状态
+  &.danger {
+    color: @error-color;
+    border-color: @error-color;
+
+    &.primary {
+      color: #fff;
+      background-color: @error-color;
+      border-color: @error-color;
+
+      &:hover,
+      &:focus {
+        background-color: lighten(@error-color, 10%);
+        border-color: lighten(@error-color, 10%);
+      }
+    }
+  }
+
+  // 禁用状态
+  &.disabled,
+  &:disabled {
+    color: @text-color-disabled;
+    background-color: @background-color-base;
+    border-color: @border-color-base;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  // 加载状态
+  &.loading {
+    position: relative;
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.65;
+  }
+
+  // 块级按钮
+  &.block {
+    width: 100%;
+  }
+}
+
+// 图标间距
+.icon {
+  margin-right: @padding-xss;
+}
+
+// 加载图标动画
+.loadingIcon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

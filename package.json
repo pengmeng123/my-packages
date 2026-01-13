@@ -1,0 +1,42 @@
+{
+  "name": "lerna-ui-packages",
+  "private": true,
+  "description": "企业级 UI 组件库 Monorepo",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "pnpm run -r --stream --filter \"ui-components\" dev",
+    "build": "pnpm run -r --stream build",
+    "clean": "pnpm run -r clean",
+    "test": "pnpm run -r test",
+    "lint": "eslint --ext \".js,.jsx,.ts,.tsx\" ./packages",
+    "prepare": "echo 'skip husky'"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@vue/babel-preset-jsx": "^1.2.4",
+    "autoprefixer": "^9.8.8",
+    "esbuild": "^0.14.14",
+    "eslint": "^8.8.0",
+    "less": "^4.1.2",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.66.1",
+    "rollup-plugin-esbuild": "^4.8.2",
+    "rollup-plugin-postcss": "^3.1.8",
+    "typescript": "^4.5.5",
+    "vue": "^2.6.14",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "packageManager": "pnpm@8.9.2",
+  "engines": {
+    "node": "^18 || ^20",
+    "pnpm": "^8.0.0"
+  }
+}
+

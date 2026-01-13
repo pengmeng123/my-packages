@@ -1,0 +1,48 @@
+// ============================================
+// UI Components 全局样式
+// ============================================
+
+@import './vars.less';
+
+// 全局重置
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// 通用过渡效果
+.kzz-fade-enter-active,
+.kzz-fade-leave-active {
+  transition: opacity @animation-duration-base @ease-base-out;
+}
+
+.kzz-fade-enter,
+.kzz-fade-leave-to {
+  opacity: 0;
+}
+
+// 滑动过渡
+.kzz-slide-up-enter-active,
+.kzz-slide-up-leave-active {
+  transition: all @animation-duration-base @ease-base-out;
+}
+
+.kzz-slide-up-enter,
+.kzz-slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+// 缩放过渡
+.kzz-zoom-enter-active,
+.kzz-zoom-leave-active {
+  transition: all @animation-duration-base @ease-base-out;
+}
+
+.kzz-zoom-enter,
+.kzz-zoom-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
+}
+

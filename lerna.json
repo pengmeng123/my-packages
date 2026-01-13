@@ -1,0 +1,11 @@
+{
+  "version": "independent",
+  "packages": ["packages/*"],
+  "ignoreChanges": ["**/__tests__/**", "**/*.md"],
+  "command": {
+    "publish": {
+      "registry": "http://172.16.183.334:9999"
+    }
+  }
+}
+
