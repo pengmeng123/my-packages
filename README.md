@@ -29,8 +29,8 @@ lerna/
 
 | 包名 | 描述 |
 |------|------|
-| `@kezhaozhao/ui-components` | Vue 2 UI 组件库 |
-| `@kezhaozhao/ui-utils` | 公共工具函数（可独立使用） |
+| `@pengmeng/ui-components` | Vue 2 UI 组件库 |
+| `@pengmeng/ui-utils` | 公共工具函数（可独立使用） |
 
 ## 快速开始
 
@@ -68,8 +68,8 @@ cd packages/ui-components && pnpm storybook
 pnpm build
 
 # 单独构建
-pnpm run -r --filter "@kezhaozhao/ui-components" build
-pnpm run -r --filter "@kezhaozhao/ui-utils" build
+pnpm run -r --filter "@pengmeng/ui-components" build
+pnpm run -r --filter "@pengmeng/ui-utils" build
 ```
 
 ### 添加新组件
@@ -91,12 +91,12 @@ pnpm run -r --filter "@kezhaozhao/ui-utils" build
 
 ```typescript
 // 全量引入
-import UIComponents from '@kezhaozhao/ui-components';
-import '@kezhaozhao/ui-components/es/index.css';
+import UIComponents from '@pengmeng/ui-components';
+import '@pengmeng/ui-components/es/index.css';
 Vue.use(UIComponents);
 
 // 按需引入
-import { Button } from '@kezhaozhao/ui-components';
+import { Button } from '@pengmeng/ui-components';
 Vue.use(Button);
 ```
 
@@ -104,7 +104,7 @@ Vue.use(Button);
 
 ```typescript
 // 按需引入，支持 Tree-shaking
-import { formatMoney, isPhone } from '@kezhaozhao/ui-utils';
+import { formatMoney, isPhone } from '@pengmeng/ui-utils';
 
 formatMoney(1234.56); // => '¥1,234.56'
 isPhone('13812345678'); // => true

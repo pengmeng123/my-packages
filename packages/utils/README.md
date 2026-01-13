@@ -1,22 +1,22 @@
-# @kezhaozhao/ui-utils
+# @pengmeng/ui-utils
 
 UI 组件库公共工具函数，可独立使用，支持 Tree-shaking。
 
 ## 安装
 
 ```bash
-pnpm add @kezhaozhao/ui-utils
+pnpm add @pengmeng/ui-utils
 ```
 
 ## 按需引入
 
 ```typescript
 // 只引入需要的函数，减少打包体积
-import { formatMoney, isPhone } from '@kezhaozhao/ui-utils';
+import { formatMoney, isPhone } from '@pengmeng/ui-utils';
 
 // 或者从具体模块引入
-import { formatMoney } from '@kezhaozhao/ui-utils/es/format';
-import { isPhone } from '@kezhaozhao/ui-utils/es/validate';
+import { formatMoney } from '@pengmeng/ui-utils/es/format';
+import { isPhone } from '@pengmeng/ui-utils/es/validate';
 ```
 
 ## API 文档
@@ -66,7 +66,7 @@ import { isPhone } from '@kezhaozhao/ui-utils/es/validate';
 ## 使用示例
 
 ```typescript
-import { formatMoney, maskPhone, classnames, createBEM } from '@kezhaozhao/ui-utils';
+import { formatMoney, maskPhone, classnames, createBEM } from '@pengmeng/ui-utils';
 
 // 格式化金额
 formatMoney(1234567.89); // => '¥1,234,567.89'

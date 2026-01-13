@@ -1,4 +1,4 @@
-# @kezhaozhao/ui-components
+# @pengmeng/ui-components
 
 企业级 Vue 2 UI 组件库
 
@@ -13,7 +13,7 @@
 ## 安装
 
 ```bash
-pnpm add @kezhaozhao/ui-components
+pnpm add @pengmeng/ui-components
 ```
 
 ## 使用
@@ -22,8 +22,8 @@ pnpm add @kezhaozhao/ui-components
 
 ```typescript
 import Vue from 'vue';
-import UIComponents from '@kezhaozhao/ui-components';
-import '@kezhaozhao/ui-components/es/index.css';
+import UIComponents from '@pengmeng/ui-components';
+import '@pengmeng/ui-components/es/index.css';
 
 Vue.use(UIComponents);
 ```
@@ -32,8 +32,8 @@ Vue.use(UIComponents);
 
 ```typescript
 import Vue from 'vue';
-import { Button } from '@kezhaozhao/ui-components';
-import '@kezhaozhao/ui-components/es/index.css';
+import { Button } from '@pengmeng/ui-components';
+import '@pengmeng/ui-components/es/index.css';
 
 Vue.use(Button);
 // 或
