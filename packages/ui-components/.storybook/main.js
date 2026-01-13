@@ -1,11 +1,11 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-essentials'],
-  framework: '@storybook/vue',
+  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  addons: ["@storybook/addon-essentials"],
+  framework: "@storybook/vue",
   core: {
-    builder: 'webpack5',
+    builder: "webpack5",
   },
   webpackFinal: async (config) => {
     // 处理 TypeScript + JSX
@@ -14,12 +14,12 @@ module.exports = {
       exclude: /node_modules/,
       use: [
         {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             presets: [
-              '@babel/preset-env',
-              '@babel/preset-typescript',
-              '@vue/babel-preset-jsx',
+              "@babel/preset-env",
+              "@babel/preset-typescript",
+              "@vue/babel-preset-jsx",
             ],
           },
         },
@@ -30,21 +30,21 @@ module.exports = {
     config.module.rules.push({
       test: /\.less$/,
       use: [
-        'style-loader',
+        "style-loader",
         {
-          loader: 'css-loader',
+          loader: "css-loader",
           options: {
             modules: {
               auto: /\.module\.less$/,
-              localIdentName: 'p_[name]_[local]',
+              localIdentName: "p_[name]_[local]",
             },
           },
         },
-        'less-loader',
+        "less-loader",
       ],
     });
 
-    config.resolve.extensions.push('.ts', '.tsx');
+    config.resolve.extensions.push(".ts", ".tsx");
 
     return config;
   },

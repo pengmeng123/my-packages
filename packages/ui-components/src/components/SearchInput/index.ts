@@ -1,11 +1,10 @@
-import { VueConstructor } from 'vue';
-import SearchInput from './SearchInput';
+import { VueConstructor } from "vue";
+import SearchInput from "./SearchInput";
 
-export type { SearchInputProps } from './SearchInput';
+export type { SearchInputProps } from "./SearchInput";
 
 (SearchInput as any).install = function (Vue: VueConstructor): void {
-  Vue.component('PSearchInput', SearchInput);
+  Vue.component("PSearchInput", SearchInput);
 };
 
 export default SearchInput;
-

@@ -1,62 +1,62 @@
-import SearchInput from './SearchInput';
+import SearchInput from "./SearchInput";
 
 export default {
-  title: 'SearchInput 搜索框',
+  title: "SearchInput 搜索框",
   component: SearchInput,
   parameters: {
     docs: {
       description: {
-        component: '搜索输入框，支持输入关键词并触发搜索。',
+        component: "搜索输入框，支持输入关键词并触发搜索。",
       },
     },
   },
   argTypes: {
     value: {
-      control: 'text',
-      description: '输入值（支持 v-model）',
+      control: "text",
+      description: "输入值（支持 v-model）",
       table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: '' },
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
       },
     },
     placeholder: {
-      control: 'text',
-      description: '占位文本',
+      control: "text",
+      description: "占位文本",
       table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: '请输入搜索内容' },
+        type: { summary: "string" },
+        defaultValue: { summary: "请输入搜索内容" },
       },
     },
     buttonText: {
-      control: 'text',
-      description: '按钮文字',
+      control: "text",
+      description: "按钮文字",
       table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: '搜索' },
+        type: { summary: "string" },
+        defaultValue: { summary: "搜索" },
       },
     },
     allowClear: {
-      control: 'boolean',
-      description: '允许清除',
+      control: "boolean",
+      description: "允许清除",
       table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'true' },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "true" },
       },
     },
     loading: {
-      control: 'boolean',
-      description: '加载状态',
+      control: "boolean",
+      description: "加载状态",
       table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
     },
     disabled: {
-      control: 'boolean',
-      description: '禁用状态',
+      control: "boolean",
+      description: "禁用状态",
       table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
     },
   },
@@ -70,7 +70,7 @@ export const 基础用法 = () => ({
   `,
   methods: {
     onSearch(value: string) {
-      alert('搜索: ' + value);
+      alert("搜索: " + value);
     },
   },
 });
@@ -173,7 +173,7 @@ export default {
 export const 双向绑定 = () => ({
   components: { PSearchInput: SearchInput },
   data() {
-    return { keyword: '阿里巴巴' };
+    return { keyword: "阿里巴巴" };
   },
   template: `
     <div>
@@ -183,7 +183,7 @@ export const 双向绑定 = () => ({
   `,
   methods: {
     onSearch(value: string) {
-      alert('搜索: ' + value);
+      alert("搜索: " + value);
     },
   },
 });

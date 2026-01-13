@@ -1,64 +1,64 @@
-import Button from './Button';
+import Button from "./Button";
 
 export default {
-  title: 'Button 按钮',
+  title: "Button 按钮",
   component: Button,
   parameters: {
     docs: {
       description: {
-        component: '按钮组件，用于触发操作。',
+        component: "按钮组件，用于触发操作。",
       },
     },
   },
   argTypes: {
     type: {
-      control: { type: 'select' },
-      options: ['primary', 'default', 'dashed', 'text', 'link'],
-      description: '按钮类型',
+      control: { type: "select" },
+      options: ["primary", "default", "dashed", "text", "link"],
+      description: "按钮类型",
       table: {
-        type: { summary: 'primary | default | dashed | text | link' },
-        defaultValue: { summary: 'default' },
+        type: { summary: "primary | default | dashed | text | link" },
+        defaultValue: { summary: "default" },
       },
     },
     size: {
-      control: { type: 'select' },
-      options: ['large', 'default', 'small'],
-      description: '按钮尺寸',
+      control: { type: "select" },
+      options: ["large", "default", "small"],
+      description: "按钮尺寸",
       table: {
-        type: { summary: 'large | default | small' },
-        defaultValue: { summary: 'default' },
+        type: { summary: "large | default | small" },
+        defaultValue: { summary: "default" },
       },
     },
     disabled: {
-      control: 'boolean',
-      description: '是否禁用',
+      control: "boolean",
+      description: "是否禁用",
       table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
     },
     loading: {
-      control: 'boolean',
-      description: '是否加载中',
+      control: "boolean",
+      description: "是否加载中",
       table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
     },
     danger: {
-      control: 'boolean',
-      description: '是否危险按钮',
+      control: "boolean",
+      description: "是否危险按钮",
       table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
     },
     block: {
-      control: 'boolean',
-      description: '是否块级按钮',
+      control: "boolean",
+      description: "是否块级按钮",
       table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
       },
     },
   },

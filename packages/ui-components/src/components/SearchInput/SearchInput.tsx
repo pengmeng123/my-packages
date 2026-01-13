@@ -1,6 +1,6 @@
-import Vue, { VNode, CreateElement, PropType } from 'vue';
-import { Input, Button } from 'ant-design-vue';
-import styles from './SearchInput.module.less';
+import Vue, { VNode, CreateElement, PropType } from "vue";
+import { Input, Button } from "ant-design-vue";
+import styles from "./SearchInput.module.less";
 
 export interface SearchInputProps {
   value?: string;
@@ -12,21 +12,21 @@ export interface SearchInputProps {
 }
 
 export default Vue.extend({
-  name: 'PSearchInput',
+  name: "PSearchInput",
 
   model: {
-    prop: 'value',
-    event: 'change',
+    prop: "value",
+    event: "change",
   },
 
   props: {
     value: {
       type: String,
-      default: '',
+      default: "",
     },
     placeholder: {
       type: String,
-      default: '请输入搜索内容',
+      default: "请输入搜索内容",
     },
     allowClear: {
       type: Boolean,
@@ -42,7 +42,7 @@ export default Vue.extend({
     },
     buttonText: {
       type: String,
-      default: '搜索',
+      default: "搜索",
     },
   },
 
@@ -62,29 +62,36 @@ export default Vue.extend({
     handleInput(e: Event) {
       const target = e.target as HTMLInputElement;
       this.inputValue = target.value;
-      this.$emit('change', target.value);
+      this.$emit("change", target.value);
     },
 
     handleSearch() {
       if (this.disabled || this.loading) return;
-      this.$emit('search', this.inputValue);
+      this.$emit("search", this.inputValue);
     },
 
     handleKeyPress(e: KeyboardEvent) {
-      if (e.key === 'Enter') {
+      if (e.key === "Enter") {
         this.handleSearch();
       }
     },
 
     handleClear() {
-      this.inputValue = '';
-      this.$emit('change', '');
-      this.$emit('clear');
+      this.inputValue = "";
+      this.$emit("change", "");
+      this.$emit("clear");
     },
   },
 
   render(h: CreateElement): VNode {
-    const { inputValue, placeholder, allowClear, loading, disabled, buttonText } = this;
+    const {
+      inputValue,
+      placeholder,
+      allowClear,
+      loading,
+      disabled,
+      buttonText,
+    } = this;
 
     return (
       <div class={styles.searchInput}>
@@ -115,4 +122,3 @@ export default Vue.extend({
     );
   },
 });
-
