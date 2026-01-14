@@ -88,9 +88,13 @@ export default Vue.extend({
       </span>
     ) : null;
 
+    // 确保 htmlType 的类型正确
+    const buttonType: "button" | "submit" | "reset" = 
+      (htmlType === "submit" || htmlType === "reset") ? htmlType : "button";
+
     return (
       <button
-        type={htmlType}
+        type={buttonType}
         class={classes}
         disabled={disabled}
         onClick={this.handleClick}

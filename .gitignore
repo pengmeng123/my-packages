@@ -8,3 +8,6 @@ yarn.lock
 package-lock.json
 *.log
 .idea
+
+# npm 配置文件（包含敏感 token，不要提交）
+.npmrc

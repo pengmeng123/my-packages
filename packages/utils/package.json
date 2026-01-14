@@ -28,7 +28,8 @@
     "url": "https://github.com/pengmeng123/my-packages.git"
   },
   "publishConfig": {
-    "registry": "http://172.16.183.334:9999"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   }
 }
 

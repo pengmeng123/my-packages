@@ -1,0 +1,11 @@
+# 配置 npm registry
+# 默认使用淘宝镜像加速安装（只读，不能发布）
+registry=https://registry.npmmirror.com/
+
+# @pengmeng 作用域包使用 npm 官方仓库（用于发布）
+@pengmeng:registry=https://registry.npmjs.org/
+
+# npm 认证 token（用于发布包）
+# 注意：请将 your-npm-token 替换为你的实际 token
+//registry.npmjs.org/:_authToken=your-npm-token
+

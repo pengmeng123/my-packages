@@ -4,7 +4,7 @@
   "ignoreChanges": ["**/__tests__/**", "**/*.md"],
   "command": {
     "publish": {
-      "registry": "http://172.16.183.334:9999"
+      "registry": "https://registry.npmjs.org"
     }
   }
 }
