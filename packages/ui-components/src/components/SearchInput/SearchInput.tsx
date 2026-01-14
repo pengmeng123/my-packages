@@ -2,6 +2,8 @@ import Vue, { VNode, CreateElement, PropType } from "vue";
 import { Input, Button } from "ant-design-vue";
 import styles from "./SearchInput.module.less";
 
+//2222
+
 export default Vue.extend({
   name: "PSearchInput",
 
@@ -107,7 +109,7 @@ export default Vue.extend({
           disabled={disabled}
           onClick={this.handleSearch}
         >
-          {buttonText}
+          {buttonText}-
         </Button>
       </div>
     );
