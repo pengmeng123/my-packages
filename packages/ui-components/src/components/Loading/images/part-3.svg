@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>loading</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="loading">
+            <g>
+                <g id="小" transform="translate(37.500000, 37.500000)">
+                    <rect id="bg" x="0" y="0" width="25" height="25"></rect>
+                    <g fill="#A0D1F8" fill-rule="nonzero" id="椭圆形">
+                        <path d="M12.5,0 C16.0376449,0 19.2320501,1.46958339 21.5060346,3.83156902 L16.092246,9.24593511 C15.2054381,8.26756087 13.9244811,7.65306122 12.5,7.65306122 C9.82310963,7.65306122 7.65306122,9.82310963 7.65306122,12.5 C7.65306122,15.1768904 9.82310963,17.3469388 12.5,17.3469388 C13.9244811,17.3469388 15.2054381,16.7324391 16.092246,15.7540649 L21.5060346,21.168431 C19.2320501,23.5304166 16.0376449,25 12.5,25 C5.59644063,25 0,19.4035594 0,12.5 C0,5.59644063 5.59644063,0 12.5,0 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

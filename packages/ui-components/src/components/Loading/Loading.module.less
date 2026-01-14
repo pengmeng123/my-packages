@@ -1,0 +1,85 @@
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@size-sm: 30px;
+@size-default: 60px;
+@size-lg: 120px;
+
+.root {
+  position: relative;
+  display: inline-block;
+  width: @size-default;
+  height: @size-default;
+
+  &Sm {
+    width: @size-sm;
+    height: @size-sm;
+  }
+
+  &Lg {
+    width: @size-lg;
+    height: @size-lg;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    animation: 1s linear infinite;
+    &:nth-child(2) {
+      animation-name: rotate-clockwise;
+    }
+    &:nth-child(3) {
+      animation-name: rotate-counterclockwise;
+    }
+  }
+}
+
+:global(.ant-spin-nested-loading) > div {
+  & > :global(.ant-spin) {
+    .root {
+      margin: -@size-default / 2;
+    }
+  }
+  & > :global(.ant-spin-sm) {
+    .root {
+      margin: -@size-sm / 2;
+    }
+  }
+  & > :global(.ant-spin-lg) {
+    .root {
+      margin: -@size-lg / 2;
+    }
+  }
+}
+
+:global(.ant-spin-sm) {
+  .root {
+    width: @size-sm;
+    height: @size-sm;
+  }
+}
+:global(.ant-spin-lg) {
+  .root {
+    width: @size-lg;
+    height: @size-lg;
+  }
+}
