@@ -1,5 +1,11 @@
 # @pengmeng/ui-components
 
+## 1.3.0
+
+### Minor Changes
+
+- add card
+
 ## 1.2.1
 
 ### Patch Changes

@@ -1,7 +1,6 @@
 import * as path from "path";
 import _ from "lodash";
 import autoprefixer from "autoprefixer";
-import babel from "@rollup/plugin-babel";
 import esbuild from "rollup-plugin-esbuild";
 import postcss from "rollup-plugin-postcss";
 
@@ -29,16 +28,16 @@ export default {
   plugins: [
     esbuild({
       target: "es2015",
-      jsx: "preserve",
+      jsx: "transform",
+      jsxFactory: "h",
+      jsxFragment: "Fragment",
       minify: false,
       loaders: {
         ".ts": "ts",
         ".tsx": "tsx",
+        ".js": "jsx",
+        ".jsx": "jsx",
       },
-    }),
-    babel({
-      babelHelpers: "runtime",
-      extensions: [".js", ".jsx", ".ts", ".tsx"],
     }),
     postcss({
       extensions: [".css", ".less"],

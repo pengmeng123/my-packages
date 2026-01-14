@@ -1,6 +1,6 @@
 import { VueConstructor } from "vue";
 
-import Card from "./Card";
+import Card from "./Card.jsx";
 
 (Card as any).install = function (Vue: VueConstructor): void {
   Vue.component("PCard", Card);

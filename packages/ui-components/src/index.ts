@@ -5,11 +5,10 @@ import './styles/index.less';
 // 组件导入
 import Button from './components/Button';
 import Card from './components/Card';
-import Loading from './components/Loading';
 import SearchInput from './components/SearchInput';
 
 // 组件列表
-const components = [Button, Card, Loading, SearchInput];
+const components = [Button, Card, SearchInput];
 
 // Vue.use() 全量安装
 function install(Vue: any): void {
@@ -19,7 +18,7 @@ function install(Vue: any): void {
 }
 
 // 导出组件
-export { Button, Card, Loading, SearchInput };
+export { Button, Card, SearchInput };
 
 // 导出默认安装方法
 export default {

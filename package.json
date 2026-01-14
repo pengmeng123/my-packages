@@ -14,13 +14,22 @@
     "version-packages": "changeset version",
     "release": "pnpm build && changeset && changeset version && pnpm -r publish --no-git-checks"
   },
+  "pnpm": {
+    "overrides": {
+      "@babel/core": "^7.23.0",
+      "@babel/preset-env": "^7.23.0",
+      "@babel/plugin-bugfix-firefox-class-in-computed-class-key": "^7.23.0"
+    }
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@babel/cli": "^7.16.8",
-    "@babel/core": "^7.16.12",
-    "@babel/plugin-transform-runtime": "^7.16.10",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
+    "@babel/core": "^7.23.0",
+    "@babel/plugin-transform-runtime": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@babel/preset-typescript": "^7.23.0",
+    "@babel/plugin-bugfix-firefox-class-in-computed-class-key": "^7.23.0",
+    "@babel/runtime": "^7.23.0",
     "@rollup/plugin-babel": "^5.3.0",
     "@vue/babel-preset-jsx": "^1.2.4",
     "autoprefixer": "^9.8.8",
