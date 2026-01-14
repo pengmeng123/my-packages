@@ -1,6 +1,6 @@
 {
   "name": "@pengmeng/ui-components",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "企业级 Vue 2 UI 组件库",
   "main": "lib/index.js",
   "module": "es/index.js",

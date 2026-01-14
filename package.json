@@ -12,7 +12,7 @@
     "prepare": "echo 'skip husky'",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm build && changeset version && pnpm -r publish --no-git-checks"
+    "release": "pnpm build && changeset && changeset version && pnpm -r publish --no-git-checks"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
