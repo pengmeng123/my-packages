@@ -2,17 +2,6 @@ import Vue, { VNode, CreateElement, PropType } from "vue";
 import { Input, Button } from "ant-design-vue";
 import styles from "./SearchInput.module.less";
 
-export interface SearchInputProps {
-  value?: string;
-  placeholder?: string;
-  allowClear?: boolean;
-  loading?: boolean;
-  disabled?: boolean;
-  buttonText?: string;
-}
-
-//2222
-
 export default Vue.extend({
   name: "PSearchInput",
 
