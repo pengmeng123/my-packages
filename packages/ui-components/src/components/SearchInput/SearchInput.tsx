@@ -11,6 +11,8 @@ export interface SearchInputProps {
   buttonText?: string;
 }
 
+//22
+
 export default Vue.extend({
   name: "PSearchInput",
 
