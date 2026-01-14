@@ -10,11 +10,12 @@
     "test": "pnpm run -r test",
     "lint": "eslint --ext \".js,.jsx,.ts,.tsx\" ./packages",
     "prepare": "echo 'skip husky'",
-    "publish:all": "pnpm run build && pnpm -r publish --no-git-checks",
-    "publish:utils": "cd packages/utils && pnpm publish --no-git-checks",
-    "publish:components": "cd packages/ui-components && pnpm publish --no-git-checks"
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset version && pnpm -r publish --no-git-checks"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@babel/cli": "^7.16.8",
     "@babel/core": "^7.16.12",
     "@babel/plugin-transform-runtime": "^7.16.10",
