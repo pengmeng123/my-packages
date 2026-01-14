@@ -1,0 +1,64 @@
+.root {
+  background-color: #fff;
+  border-radius: 4px;
+  & + & {
+    margin-top: 15px;
+  }
+}
+
+.header {
+  padding: 0 20px;
+  position: relative;
+  height: 60px;
+  display: flex;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    height: 1px;
+    background-color: #eee;
+  }
+  > .title {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    height: 100%;
+    em {
+      color: #fd485e;
+      margin-left: 5px;
+      margin-right: 5px;
+      font-weight: inherit;
+    }
+  }
+
+  > .extra {
+    display: flex;
+    align-items: center;
+    color: #999;
+    height: 100%;
+    line-height: 1; // IE 样式问题
+  }
+}
+
+// .line {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   padding-left: inherit;
+//   padding-right: inherit;
+//   &::after {
+//     content: '';
+//     display: block;
+//     border-bottom: 1px solid #eee;
+//   }
+// }
+
+.body {
+  padding: 10px 20px;
+}
