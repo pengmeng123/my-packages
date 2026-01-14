@@ -1,5 +1,12 @@
 # @pengmeng/ui-components
 
+## 1.2.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @pengmeng/ui-utils@0.0.2
+
 ## 1.2.0
 
 ### Minor Changes
