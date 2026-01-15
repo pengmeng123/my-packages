@@ -1,20 +1,37 @@
+/*
+  TypeScript 配置（用于 utils 包）
+  - 这是一个 jsonc 文件，支持注释。
+  - 保持与构建输出目录 `outDir` 对应，以便生成声明文件到 `es`。
+*/
 {
+  // 编译器选项
   "compilerOptions": {
+    // 指定要编译到的 ECMAScript 目标版本
     "target": "ES2015",
     "module": "ESNext",
+    // 使用 Node 风格解析模块
     "moduleResolution": "node",
+    // 开启严格类型检查
     "strict": true,
+    // 生成类型声明文件（.d.ts）
     "declaration": true,
+    // 生成声明映射，便于调试声明文件
     "declarationMap": true,
+    // 允许与 CommonJS 模块互操作
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    // 跳过库文件的类型检查以加速编译
     "skipLibCheck": true,
+    // 允许导入 JSON 模块
     "resolveJsonModule": true,
+    // 包含的运行时库
     "lib": ["ES2015", "DOM"],
+    // 基础路径，用于 paths 映射（相对项目根）
     "baseUrl": ".",
+    // 输出目录（编译产物与类型文件）
     "outDir": "es"
   },
+  // 要包含的源文件（此包只含 TypeScript 源文件）
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "lib", "es"]
 }
-

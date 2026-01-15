@@ -9,3 +9,4 @@ registry=https://registry.npmmirror.com/
 # 注意：请将 your-npm-token 替换为你的实际 token
 //registry.npmjs.org/:_authToken=your-npm-token
 
+
