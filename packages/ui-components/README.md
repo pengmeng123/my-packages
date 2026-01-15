@@ -4,7 +4,7 @@
 
 ## 📖 在线文档
 
-查看 [Storybook 组件文档](https://pengmeng123.github.io/my-packages/storybook/) 了解所有组件的使用方法和示例。
+📖 查看 [Storybook 组件文档](https://pengmeng123.github.io/my-packages/storybook/) 了解所有组件的使用方法和示例。
 
 ## 特性
 
