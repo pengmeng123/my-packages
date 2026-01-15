@@ -14,16 +14,24 @@ permissions:
   pages: write
   id-token: write
 
+# 允许一个并发部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
           
@@ -39,13 +47,15 @@ jobs:
         working-directory: packages/ui-components
         run: pnpm run build:docs
         
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: packages/ui-components/storybook-static
-          destination_dir: storybook
-          cname: false
-          # 如果还是失败，可以尝试使用 personal access token
-          # github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          path: packages/ui-components/storybook-static
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
 
