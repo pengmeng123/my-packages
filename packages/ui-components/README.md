@@ -70,8 +70,7 @@ Vue.component('PButton', Button);
 # 安装依赖
 pnpm install
 
-# 生成入口文件
-pnpm run build:entry
+
 
 # 构建
 pnpm run build
@@ -94,27 +93,12 @@ pnpm run clean
 
 ```typescript
 // src/components/Input/Input.tsx
-import { VNode, CreateElement } from 'vue';
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import styles from './Input.module.less';
 
-@Component({
-  name: 'PInput',
-})
-export default class Input extends Vue {
-  @Prop({ type: String, default: '' })
-  readonly value!: string;
-
-  render(h: CreateElement): VNode {
-    return (
-      <input
-        class={styles.input}
-        value={this.value}
-        onInput={(e: Event) => this.$emit('input', (e.target as HTMLInputElement).value)}
-      />
-    );
+export default Vue.extend({
+  render() {
+    return <a-input/>
   }
-}
+})
 ```
 
 ```typescript
@@ -153,7 +137,4 @@ ui-components/
 └── README.md
 ```
 
-## 许可证
-
-UNLICENSED
 
